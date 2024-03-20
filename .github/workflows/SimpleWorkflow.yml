@@ -2,6 +2,6 @@ name: Simple Workflow
 on: push
 jobs:
   my-first-job
-  runs-on: ubuntu-latest
- steps:
--run : echo "Hello"
+    runs-on: ubuntu-latest
+    steps:
+      -run : echo "Hello"
