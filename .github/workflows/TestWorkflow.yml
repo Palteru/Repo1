@@ -1,0 +1,21 @@
+name: TestWorkflow.yml
+#on: push
+on: workflow_dispatch
+jobs: 
+  Setup:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: |
+         echo "Setup"
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        if: ${{ success() }}
+          
+           echo "Build"
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Test"
+
